@@ -140,19 +140,19 @@ namespace Simple_Screenshot
         }
         private void PrereqButton_Click(object sender, EventArgs e)
         {
-
+           
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var dir = Path.Combine(documents, "Prereqs");
-
+            
             foreach (int index in Prereq)
             {
-
+               
                 File.WriteAllText(dir, PCPrereqs.Items[index].ToString());
-
+              
             }
 
 
-        }
+            }
 
         private void label1_Click_2(object sender, EventArgs e)
         {

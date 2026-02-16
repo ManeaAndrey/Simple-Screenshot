@@ -16,6 +16,8 @@ namespace Simple_Screenshot
         private readonly ScreenshotService screenshotService = new();
         private ThemeManager themeManager = new();
         private FileService fileService = new();
+        private static extern bool RegisterHotKey(IntPtr hWnd, int id, uint fsModifiers, uint vk);
+        private static extern bool RegisterHotKey(IntPtr hWnd, int id, uint fsModifiers, uint vk);
 
         public Form1()
         {
@@ -79,7 +81,7 @@ namespace Simple_Screenshot
             SummaryAssist = textBox1.Text;
         }
 
-        private void SummaryAssistActivatorButton1_Click(object sender, EventArgs e)
+            fileService.SaveSummary(SummaryAssist);
         {
             fileService.SaveSummary(SummaryAssist);
         }
